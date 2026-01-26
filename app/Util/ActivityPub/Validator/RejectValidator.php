@@ -19,7 +19,7 @@ class RejectValidator
             'actor' => 'required|url',
             'object.id' => 'required|url',
             'object.actor' => 'required|url',
-            'object.object' => 'required|url',
+            'object.object' => 'required|url|same:actor',
             'object.type' => [
                 'required',
                 Rule::in(['Follow']),
